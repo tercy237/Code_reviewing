@@ -1031,7 +1031,8 @@
     justify-content: center;
     display: flex;
   }
-/* mobile version */
+
+  /* mobile version */
   .mobile_menu {
     display: none;
     flex-direction: column;
