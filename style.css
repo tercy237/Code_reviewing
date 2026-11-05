@@ -5,6 +5,11 @@
   box-sizing: border-box;
 }
 
+/* The modal's display:flex would otherwise override the hidden attribute */
+.modal_style[hidden] {
+  display: none;
+}
+
 /* MOBILE SECTION */
 @media (max-width: 768px) {
   .logo a {
@@ -151,7 +156,7 @@
   }
 
   .hero {
-    background: url(./assets/images/header-illsutration-mobile@2x.png);
+    background: url("./assets/images/header-illsutration-mobile@2x.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -179,7 +184,7 @@
   }
 
   .first {
-    margin: 25px 0 0 0;
+    margin: 25px 0 0;
     padding: 10px 15px;
   }
 
@@ -241,7 +246,7 @@
     align-items: center;
     justify-content: center;
     gap: 10px;
-    padding: 0 0 20px 0;
+    padding: 0 0 20px;
   }
 
   .project_card img {
@@ -274,7 +279,7 @@
   }
 
   .about_text {
-    background: url(./assets/images/abt_me_left_mobile.svg) no-repeat left bottom, url(./assets/images/abt_mobile_right.svg) right top no-repeat;
+    background: url("./assets/images/abt_me_left_mobile.svg") no-repeat left bottom, url("./assets/images/abt_mobile_right.svg") right top no-repeat;
   }
 
   .about_cards {
@@ -313,10 +318,10 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin: 10px 0 30px 0;
+    margin: 10px 0 30px;
     display: flex;
     gap: 20px;
-    background: url(./assets/images/illustration-contact-form.svg) bottom right;
+    background: url("./assets/images/illustration-contact-form.svg") bottom right;
     background-repeat: no-repeat;
     color: #172b4d;
   }
@@ -378,7 +383,7 @@
     left: 0;
     align-items: center;
     justify-content: center;
-    background-color: rgb(134, 129, 129);
+    background-color: #868181;
   }
 
   .modal_style img {
@@ -441,6 +446,7 @@
   .modal_links .button {
     margin-top: 15px;
     padding: 10px 15px;
+    background-color: #36b37e;
     color: #fff;
     border-radius: 5px;
     text-decoration: none;
@@ -472,6 +478,7 @@
     margin: 3px 90px;
     text-align: center;
   }
+
   /* footer paragraph styling */
   footer p {
     padding: 3px 15px;
@@ -505,7 +512,7 @@
     align-items: center;
     justify-content: center;
     gap: 10px;
-    padding: 0 0 20px 0;
+    padding: 0 0 20px;
   }
 
   .project_card img {
@@ -667,7 +674,7 @@
   }
 
   .hero {
-    background: url(./assets/images/header-illsutration-mobile@2x.png);
+    background: url("./assets/images/header-illsutration-mobile@2x.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -695,7 +702,7 @@
   }
 
   .first {
-    margin: 25px 0 0 0;
+    margin: 25px 0 0;
     padding: 10px 50px;
   }
 
@@ -715,7 +722,7 @@
   }
 
   .about_text {
-    background: url(./assets/images/abt_left_mob.svg) no-repeat left bottom, url(./assets/images/abt_mobile_right.svg) right top no-repeat;
+    background: url("./assets/images/abt_left_mob.svg") no-repeat left bottom, url("./assets/images/abt_mobile_right.svg") right top no-repeat;
   }
 
   .about_text h2 {
@@ -760,7 +767,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin: 10px 0 30px 0;
+    margin: 10px 0 30px;
   }
 
   form {
@@ -821,7 +828,7 @@
     left: 0;
     align-items: center;
     justify-content: center;
-    background-color: rgb(134, 129, 129);
+    background-color: #868181;
   }
 
   .modal_style img {
@@ -883,6 +890,7 @@
   .modal_links .button {
     margin-top: 15px;
     padding: 10px 15px;
+    background-color: #36b37e;
     color: #fff;
     border-radius: 5px;
     text-decoration: none;
@@ -1023,7 +1031,8 @@
     justify-content: center;
     display: flex;
   }
-/* mobile version*/
+
+/* mobile version */
   .mobile_menu {
     display: none;
     flex-direction: column;
@@ -1038,7 +1047,7 @@
   }
 
   .hero {
-    background: url(./assets/images/Header-llustration-desktop.svg);
+    background: url("./assets/images/Header-llustration-desktop.svg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -1067,7 +1076,7 @@
   }
 
   .first {
-    margin: 25px 0 0 0;
+    margin: 25px 0 0;
     padding: 10px 50px;
   }
 
@@ -1099,7 +1108,7 @@
   }
 
   .about {
-    background: url(./assets/images/illustration-about-me-2-desktop.svg) top left, url("assets/images/illustration about me desktop.svg") top right;
+    background: url("./assets/images/illustration-about-me-2-desktop.svg") top left, url("assets/images/illustration about me desktop.svg") top right;
     background-repeat: no-repeat;
     margin-top: 20px;
   }
@@ -1131,7 +1140,7 @@
     border-radius: 8px;
     width: 327px;
     min-height: 316px;
-    background-color: #EBF0EE;
+    background-color: #ebf0ee;
     gap: 10px;
   }
 
@@ -1153,22 +1162,23 @@
   }
 
   .about_card ul li {
-    background-color:#FFF;
+    background-color: #fff;
     border: none;
     max-width: 327px;
     font-size: 18px;
     padding: 2px 5px;
     border-radius: 3px;
   }
+
   .contact {
     display: flex;
     gap: 20px;
     align-items: center;
     justify-content: center;
-    margin: 10px 0 30px 0;
+    margin: 10px 0 30px;
     width: 89.5%;
     padding: 40px 170px;
-    background: url(./assets/images/illustration-1-contact-form-desktop.svg), url("assets/images/illustration-2-contact-form-desktop.svg") bottom, url("assets/images/contact form-illustratoin-3-desktop.svg") bottom right;
+    background: url("./assets/images/illustration-1-contact-form-desktop.svg"), url("assets/images/illustration-2-contact-form-desktop.svg") bottom, url("assets/images/contact form-illustratoin-3-desktop.svg") bottom right;
     background-repeat: no-repeat;
   }
 
@@ -1243,7 +1253,7 @@
     left: 0;
     align-items: center;
     justify-content: center;
-    background-color: rgb(134, 129, 129);
+    background-color: #868181;
     padding: 50px 0;
   }
 
@@ -1302,6 +1312,7 @@
   .modal_links .button {
     margin-top: 15px;
     padding: 10px 15px;
+    background-color: #36b37e;
     color: #fff;
     border-radius: 5px;
     text-decoration: none;
